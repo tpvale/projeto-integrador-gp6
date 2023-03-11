@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "4780afe5-538c-4613-9522-65bc6a8392ae",
+		"name": "projeto integrador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20393191"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "criar categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qualification\": \"teste\",\r\n    \"descriptions\": \"teste\",\r\n    \"urlImage\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todas as categorias paginadas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"all"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "28",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "busca categoria por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleta categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/delete/34",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"delete",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar uma categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qualification\": \"test update\",\r\n    \"descriptions\": \"test update\",\r\n    \"urlImage\": \"test update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/update/33",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"update",
+								"33"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "buscar todas os produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "busca produtos por categoria ou cidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product?category=teste&city=teste",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "teste"
+								},
+								{
+									"key": "city",
+									"value": "teste"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "buscar todas as cidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/city/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"city",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "criar cidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"São José dos Campos\",\r\n    \"country\": \"São Paulo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/city/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"city",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
